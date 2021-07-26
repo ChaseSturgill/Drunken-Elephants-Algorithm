@@ -1,29 +1,11 @@
-#basic hill climbing search provided as base code for the DSA/ISE 5113 course
-#author: Charles Nicholson
-#date revised: 3/26/2021
-
-#YOU MAY CHANGE ALMOST ANYTHING YOU LIKE IN THIS CODE.  
-#However, I would like all students to have the same problem instance, therefore please do not change anything relating to:
-#   random number generator
-#   number of items (should be 150)
-#   random problem instance
-#   weight limit of the knapsack
-
-#------------------------------------------------------------------------------
-
-#Homework 5
-#Problem 2
-#Student name: Chase Sturgill (Group 9)
-#Date: 4/25/2021
-
-#need some python libraries
-from random import Random   #need this for the random number generation -- do not change
+#python libraries
+from random import Random   #need this for the random number generation
 import numpy as np
 from itertools import chain
 
 
 #to setup a random number generator, we will specify a "seed" value
-#need this for the random number generation -- do not change
+#need this for the random number generation
 seed = 51132021
 myPRNG = Random(seed)
 
@@ -45,11 +27,6 @@ for i in range(0,n):
     
 #define max weight for the knapsack
 maxWeight = 1500
-
-#change anything you like below this line ------------------------------------
-#some of the provided functions are intetionally incomplete
-#also, you may wish to restructure the approach entirely -- this is NOT the world's best Python code
-
 
 #monitor the number of solutions evaluated
 solutionsChecked = 0
@@ -104,10 +81,6 @@ def initial_solution():
             totalWeight = np.dot(a,c)   #generate the new max weight
 
     return x
-
-
-
-
 
 #varaible to record the number of solutions evaluated
 solutionsChecked = 0
